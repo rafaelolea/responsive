@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Responsive Design - Rfdesign</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="js/jquery-1.11.2.min.js"></script>
+
+<link rel="stylesheet" href="css/normalize.css">
+<link rel="stylesheet" type="text/css" href="css/estilo.css"> <!-- css principal -->
+<link rel="stylesheet" href="js/menu-responsive/css/styles.css"> <!-- css menu -->
+
+<script src="js/script.js"></script>
+<!--[if lt IE 9]> <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script> < ![endif]-->
+
+<!-- slider -->
+<script src="js/slider-responsive/dist/slippry.min.js"></script>
+<script src="//use.edgefonts.net/cabin;source-sans-pro:n2,i2,n3,n4,n6,n7,n9.js"></script>
+<link rel="stylesheet" href="js/slider-responsive/css/demo.css">
+<link rel="stylesheet" href="js/slider-responsive/dist/slippry.css">
+    
+<!-- CARRUSEL BXSLIDER -->
+<script src="js/bxslider/jquery.bxslider.js"></script>
+<link href="js/bxslider/jquery.bxslider.css" rel="stylesheet" />
+<!-- END -->
+
+</head>
+<body>
+<div id="container"> <!-- Contenedor sitio -->
+    <header> 
+      <img src="images/logo.png" alt="logo">
+    </header>
+    <nav id='cssmenu'> <!-- menu -->
+        <ul>
+           <li><a href='#'>Inicio</a></li>
+           <li class='active has-sub'><a href='#'>Productos</a>
+              <ul>
+                 <li class='has-sub'><a href='#'>Product 1</a>
+                    <ul>
+                       <li><a href='#'>Sub Product</a></li>
+                       <li><a href='#'>Sub Product</a></li>
+                    </ul>
+                 </li>
+                 <li class='has-sub'><a href='#'>Product 2</a>
+                    <ul>
+                       <li><a href='#'>Sub Product</a></li>
+                       <li><a href='#'>Sub Product</a></li>
+                    </ul>
+                 </li>
+              </ul>
+           </li>
+           <li><a href='#'>Quienes Somos</a></li>
+           <li><a href='#'>Servicios</a></li>
+           <li><a href='#'>Faq's</a></li>
+           <li><a href='#'>Ubicación</a></li>
+           <li><a href='#'>Contacto</a></li>
+        </ul>
+    </nav>
+
+	<div id="slider">
+    	<section class="demo_wrapper">
+			<article class="demo_block">
+		
+				<ul id="demo1">
+					<li><a href="#slide1"><img src="dinamicos/slider/image-1.jpg" alt="This is caption 1 <a href='#link'>Even with links!</a>"></a></li>
+					<li><a href="#slide2"><img src="dinamicos/slider/image-2.jpg"  alt="This is caption 2"></a></li>
+					<li><a href="#slide3"><img src="dinamicos/slider/image-4.jpg" alt="And this is some very long caption for slide 3. Yes, really long."></a></li>
+				</ul>
+			</article>
+		</section>
+        
+        <script>
+			$(function() {
+				var demo1 = $("#demo1").slippry({
+					// transition: 'fade',
+					// useCSS: true,
+					   pager: false,
+					// speed: 1000,
+					// pause: 3000,
+					// auto: true,
+					   preload: 'visible',
+					// autoHover: false
+				});
+
+				$('.stop').click(function () {
+					demo1.stopAuto();
+				});
+
+				$('.start').click(function () {
+					demo1.startAuto();
+				});
+
+				$('.prev').click(function () {
+					demo1.goToPrevSlide();
+					return false;
+				});
+				$('.next').click(function () {
+					demo1.goToNextSlide();
+					return false;
+				});
+				$('.reset').click(function () {
+					demo1.destroySlider();
+					return false;
+				});
+				$('.reload').click(function () {
+					demo1.reloadSlider();
+					return false;
+				});
+				$('.init').click(function () {
+					demo1 = $("#demo1").slippry();
+					return false;
+				});
+			});
+		</script>
+        
+    
+    </div>
+    <section class="contenido">
+        <article class="items">
+          <img src="images/foto1.png" width="400" height="250" alt="foto">
+          <h3>Aenean vulputate eleifend tellus</h3>
+        	<p> Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, telluseget condimentum rhoncus, sem quam semper libero.</p>
+        </article>
+        
+        <article class="items">
+          <img src="images/foto2.png" width="400" height="250" alt="foto">
+          <h3>Aenean vulputate eleifend tellus</h3>
+        	<p> Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero.</p>
+        </article>
+        
+        <article class="items">
+          <img src="images/foto1.png" width="400" height="250" alt="foto">
+          <h3>Aenean vulputate eleifend tellus</h3>
+          <p> Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero.</p>
+        </article>
+   <hr> 
+  	<article class="campos">
+    	<img src="images/imagen-campos.jpg" width="500" height="500" alt="img">
+        <h3> Aenean imperdiet etiam</h3> 
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+    </article>
+ 
+    <article class="campos">
+    	<img src="images/imagen-campos.jpg" width="500" height="500" alt="img">
+        <h3> Aenean imperdiet etiam</h3> 
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p>
+    </article>
+<div class="clear"></div>
+  
+<hr>
+
+<section class="carrusel">
+
+	<div class="slider1"><!-- BXSLIDER CONTENT -->
+		<div class="slide"><!-- BOX -->
+  			<img src="dinamicos/marcas/m5.jpg" width="120" height="70" alt="marcas">
+		</div><!-- END BOX -->
+
+        <div class="slide"><!-- BOX -->
+  			<img src="dinamicos/marcas/m1.jpg" width="120" height="70" alt="marcas">
+ 		</div><!-- END BOX -->
+
+		<div class="slide"><!-- BOX -->
+  			<img src="dinamicos/marcas/m2.jpg" width="120" height="70" alt="marcas">
+		</div><!-- END BOX -->
+
+		<div class="slide"><!-- BOX -->
+  			<img src="dinamicos/marcas/m3.jpg" width="120" height="70" alt="marcas">
+		</div><!-- END BOX -->
+
+		<div class="slide"><!-- BOX -->
+  			<img src="dinamicos/marcas/m4.jpg" width="120" height="70" alt="marcas">
+		</div><!-- END BOX -->	
+
+		<div class="slide"><!-- BOX -->
+  			<img src="dinamicos/marcas/m6.jpg" width="120" height="70" alt="marcas">
+		</div><!-- END BOX -->
+
+<!-- END SLIDER CONTENT --></div>
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.slider1').bxSlider({
+	auto: true,
+	autoHover: true,
+	pause: 2000,
+    slideWidth: 900,
+    minSlides: 7,
+    maxSlides: 7,
+	moveSlides: 1,
+	pager: false,
+    slideMargin:5
+  });
+});
+</script>
+
+</section>
+
+</section> <!-- fin contenidos -->
+   
+  <footer>
+     <div class="footer-logo"> 
+   		    <img src="images/logo.png"  alt="logo">
+   	 </div>
+     <div class="footer-left">
+     	<p><b>Rfdesign, Diseñador Gráfico </b></p>
+       	<p> Dirección: Nombe calle 1234, Santiago. Chile.
+          	<br>
+          	Fono: +562 - 2 1234 567
+          	<br>
+          	Email: <a href="#">contacto@rafaelolea.cl</a>    
+            </p>    
+      </div>
+      <div class="footer-right">
+        	<p> Diseñado por <a href="#">rafaelolea.cl</a></p>    
+      </div>
+      <div class="clear"></div>
+  </footer>
+</div>
+
+</body>
+</html>
